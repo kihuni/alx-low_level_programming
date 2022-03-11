@@ -1,3 +1,2 @@
-Task 3
 #!/bin/bash
-gcc $CFILE -o cisfun \
+gcc -S $CFILE \
