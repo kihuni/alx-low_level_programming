@@ -1,0 +1,1 @@
+condition statement in c
