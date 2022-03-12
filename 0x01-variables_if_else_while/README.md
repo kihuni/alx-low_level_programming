@@ -1,1 +1,2 @@
-variables and conditions in c
+if else statement in c
+
