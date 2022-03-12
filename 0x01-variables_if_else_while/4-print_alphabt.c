@@ -1,25 +1,24 @@
-
-  
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 /**
- * main - Prints the alphabet without q and e.
- *
- * Return: Always 0 (Success)
+ * main - main block
+ * Description - prints alphabet in lowercase
+ * q and e letters are not included
+ * Return: 0
  */
 int main(void)
 {
-	int i;
+	char a = 'a';
 
-	for (i = 97; i < 123; i++)
+	while (a <= 'z')
 	{
-		if (i != 101 && i != 113)
+		if (a != 'q' && a != 'e')
 		{
-			putchar(i);
+			putchar(a);
 		}
+		a++;
 	}
 	putchar('\n');
+
 	return (0);
 }
