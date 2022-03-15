@@ -20,25 +20,4 @@ int main(void)
 	_putchar('\n');
 
 	return (0);
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
 }
