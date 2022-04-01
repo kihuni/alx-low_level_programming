@@ -1,21 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main (int argc, char *argv[])
+/**
+ * main - Entry point
+ *
+ * @argc: Counts the number of parameters that go into main
+ * @argv: Pointer of array of pointers containing strings entering main
+ * Return: Always 0 (Success)
+ */
+int main(int argc, char **argv)
 {
-    int count;
-
-    printf("This program was called with \"%s\",\n", argv[0]);
-
-    if(argc > 1)
-    {
-        for (count = 1; count < argc; count++)
-        {
-            printf("argv[%d] = %s\n", count, argv[count]);
-        }
-       
-    }
-     else {
-            printf("The command had no other arguments.\n");
-        }
-        return 0;
+	(void) argv;
+	printf("%i\n", argc - 1);
+	return (0);
 }
