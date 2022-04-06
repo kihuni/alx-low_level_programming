@@ -1,30 +1,42 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
-* _strchr - locates a character in a string.
+* _atoi - converts a string to an integer.
 * @s: pointer to string.
-* @c: character to be found.
 *
-* Return: pointer to first occurence of the character.
-* or null if character is not found.
+* Return: integer gotten.
 */
 
-char *_strchr(char *s, char c)
+int _atoi(char *s)
 {
-	char *p; /* pointer to char*/
-	int counter;
+	int index, ind2;
+	unsigned int res;
+	int sign = 1;
+	char now;
 
-	for (counter = 0; s[counter] != '\0'; counter++)
+	index = 0;
+	res = 0;
+	while (*(s + index) != '\0')
 	{
-		if (s[counter] == c)
+		now = *(s + index);
+		if (now == '-')
 		{
-			p = &s[counter];
+			sign *= -1;
+		}
+		if (now >= '0' && now <= '9')
+		{
+			ind2 = index;
+			while (*(s + ind2) > 47 && *(s + ind2) < 58)
+			{
+				res = (res * 10) + *(s + ind2) - '0';
+				ind2++;
+			}
 			break;
 		}
+		index++;
 	}
-	if (s[counter] == c)
-	{
-		p = &s[counter];
-	}
-	return (p);
+	if (sign < 0)
+		res *= sign;
+	return (res);
 }

@@ -1,21 +1,16 @@
 #include "main.h"
 
 /**
-* _strcpy - copy stringat the end of another string including \0.
-* @dest: pointer to string to be copied to.
-* @src: pointer to string to be copied.
+* _abs - computes absolute value of number.
+* @n: is the number to be converted to its absolute value.
 *
-* Return: pointer to dest.
+* Return: the number converted to absolute value.
 */
 
-char *_strcpy(char *dest, char *src)
+int _abs(int n)
 {
-	int j;
-
-	for (j = 0; src[j] != '\0'; j++)
-	{
-		dest[j] = src[j];
-	}
-	dest[j] = '\0';
-	return (dest);
+	if (n >= 0)
+		return (n);
+	else
+		return (n * -1);
 }
