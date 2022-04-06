@@ -1,1 +1,1 @@
-library in c
+"library in C-programming"
