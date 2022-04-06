@@ -1,31 +1,17 @@
 #include "main.h"
-
 /**
- * *_strcat - function commute srtings
- * @dest: param pointer to a char
- * @src: param pointer to a char
- * Return: return value of dest
+ * _memcpy - copies memory area,
+ * @dest: destination memory area.
+ * @src: source memory area.
+ * @n: bytes filled.
+ * Return: the pointer to dest.
  */
-
-char *_strcat(char *dest, char *src)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	int i;
-	int j;
+	unsigned int i;
 
-	i = 0;
-	j = 0;
+	for (i = 0; i < n; i++)
+		*(dest + i) =  *(src + i);
 
-	while (dest[i] != '\0')
-	{
-		i++;
-	}
-	while (src[j] != '\0')
-	{
-		dest[i] = src[j];
-		j++;
-		i++;
-	}
-
-	dest[i] = '\0';
 	return (dest);
 }
