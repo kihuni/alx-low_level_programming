@@ -1,1 +1,1 @@
-int_atoi(char *s){}
+int _atoi(char *s){}
