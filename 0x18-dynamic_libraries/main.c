@@ -1,4 +1,5 @@
-#include "main.h"
+#include "main2.h"
+
 #include <stdio.h>
 
 /**
@@ -6,8 +7,16 @@
  *
  * Return: Always EXIT_SUCCESS.
  */
-int main(void)
+
+int main()
 {
-    printf("%d\n", _strlen("My Dyn Lib"));
-    return(0);
+    int a = 12, b = 13;
+    add(a,b);
+    sub(a,b);
+    mul(a,b);
+    div(a,b);
+    mod(a,b);
+
+
+    return (0);
 }
